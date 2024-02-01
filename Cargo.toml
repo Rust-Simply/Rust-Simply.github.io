@@ -1,3 +1,10 @@
-[workspace]
+[package]
+name = "rust-simply-website"
+version = "0.1.0"
+edition = "2021"
 
-members = ["website"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = "0.4.3"
+dioxus-web = "0.4.3"
