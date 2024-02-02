@@ -59,6 +59,16 @@ h2 {
     font-family: MuseoSansRounded900, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--primary-fg);
+}
+
 span {
     display: inline-block;
 }
@@ -80,6 +90,26 @@ article {
     padding: 2rem;
 }
 
+.fifty-fifty {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fifty-fifty > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fifty-fifty img {
+    max-width: 90%;
+}
+
+figcaption {
+    padding: 0.5rem;
+}
+
 footer {
     padding: 2em 1em;
     display: flex;
@@ -89,4 +119,5 @@ footer {
 
 footer img {
     max-height: 3rem;
+    margin: 0 1rem;
 }

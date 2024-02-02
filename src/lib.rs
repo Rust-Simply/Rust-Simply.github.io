@@ -65,17 +65,28 @@ fn Iriss(cx: Scope) -> Element {
                 }
                 p {
                     indoc! { "
-                        There are two parts to IRISS, a YouTube Series that's easy to watch, and a book / written guide
-                        that provides more details.
+                        There are two parts to IRISS, a YouTube Series that's easy to watch, and a written guide that
+                        provides more details.
                     " }
                 }
             }
             section {
-                div {
-                    "YouTube"
+                class: "fifty-fifty",
+                a {
+                    href: "https://www.youtube.com/playlist?list=PLW2L8KbM0O7aRi_Bt4YE1JuW9EdMs0ztR",
+                    img {
+                        src: "./images/iriss-youtube.jpeg"
+                    }
+                    figcaption { "YouTube" }
                 }
-                div {
-                    "Book"
+                a {
+                    href: "/idiomatic-rust-in-simple-steps",
+                    img {
+                        src: "./images/iriss-book.png"
+                    }
+                    figcaption {
+                        "The book"
+                    }
                 }
             }
         }
@@ -88,8 +99,15 @@ fn Footer(cx: Scope) -> Element {
             a {
                 href: "https://github.com/Rust-Simply",
                 img {
-                    src: "./github-mark.svg",
+                    src: "./logos/github-mark.svg",
                     alt: "GitHub"
+                }
+            }
+            a {
+                href: "https://www.youtube.com/@rustsimply",
+                img {
+                    src: "./logos/yt_icon_rgb.png",
+                    alt: "YouTube"
                 }
             }
         }
