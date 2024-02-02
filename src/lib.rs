@@ -15,11 +15,11 @@ fn Title(cx: Scope) -> Element {
     render! {
         header {
             id: "title",
-            h1 {
-                "Rust, Simply"
-            }
             img {
-                src: "rust-simply.svg"
+                src: "phio.svg"
+            }
+            h1 {
+                "Rust, simply"
             }
         }
     }

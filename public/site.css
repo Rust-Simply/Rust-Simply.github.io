@@ -1,27 +1,40 @@
+@font-face {
+    font-family: MuseoSansRounded900;
+    src: url(./fonts/MuseoSansRounded900.otf);
+}
+
 html {
     font-size: 62.5%;
+
+    --primary-bg: #ffe0e0;
+    --primary-fg: #fe4500;
+    --secondary-bg: #b3a0a0;
+    --secondary-fg: #ffffff;
+    --tertiary-bg: #3E5C76;
+    --nav-size: 12rem;
+    --section-height: calc(100vh - 18rem);
 }
 
 #title {
-    position: relative;
-    background-color: #333333;
-    height: 30rem;
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+    padding: 5rem 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 #title img {
-    position: absolute;
-    left: 5rem;
-    top: 2rem;
-    transform: rotate(-20deg);
-    max-height: 50%;
-    margin: 30px;
+    max-height: 15rem;
+    margin-bottom: 2rem;
 }
 
 #title h1 {
     font-size: 8rem;
-    color: white;
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: MuseoSansRounded900, sans-serif;
+}
+
+svg path {
+    stroke: hotpink;
 }
