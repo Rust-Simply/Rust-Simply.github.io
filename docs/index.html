@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rust, Simply</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="site.css">
+
+</head>
+<body>
+  <div id="main"><h1>Rust, Simply</h1><meta hidden="true" id="dioxus-storage-props" data-serialized="AQ==" /><meta hidden="true" id="dioxus-storage-data" data-serialized="AA==" /><script>(function () {
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const url = protocol + '//' + window.location.host + '/_dioxus/disconnect';
+    const poll_interval = 1000;
+    const reload_upon_connect = () => {
+        console.log('Disconnected from server. Attempting to reconnect...');
+        window.setTimeout(
+            () => {
+                // Try to reconnect to the websocket
+                const ws = new WebSocket(url);
+                ws.onopen = () => {
+                    // If we reconnect, reload the page
+                    window.location.reload();
+                }
+                // Otherwise, try again in a second
+                reload_upon_connect();
+            },
+            poll_interval);
+    };
+
+    // on initial page load connect to the disconnect ws
+    const ws = new WebSocket(url);
+    // if we disconnect, start polling
+    ws.onclose = reload_upon_connect;
+})()</script></div>
+  <script type="module">
+    import init from "/./assets/dioxus/rust-simply-website.js";
+    init("/./assets/dioxus/rust-simply-website_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+  
+</body>
+</html>
