@@ -1,10 +1,16 @@
 @font-face {
     font-family: MuseoSansRounded900;
-    src: url(./fonts/MuseoSansRounded900.otf);
+    src: url(fonts/MuseoSans/MuseoSansRounded900.otf);
+}
+
+@font-face {
+    font-family: RalewayRegular;
+    src: url(fonts/Raleway/static/Raleway-Regular.ttf);
 }
 
 html {
     font-size: 62.5%;
+    font-family: RalewayRegular, sans-serif;
 
     --primary-bg: #ffe0e0;
     --primary-fg: #fe4500;
@@ -13,6 +19,18 @@ html {
     --tertiary-bg: #3E5C76;
     --nav-size: 12rem;
     --section-height: calc(100vh - 18rem);
+}
+
+body {
+    font-size: 2rem;
+}
+
+p {
+    margin: 3rem 0;
+}
+
+article:nth-child(odd) {
+    background-color: var(--primary-bg);
 }
 
 #title {
@@ -30,11 +48,45 @@ html {
     margin-bottom: 2rem;
 }
 
-#title h1 {
+h1 {
     font-size: 8rem;
     font-family: MuseoSansRounded900, sans-serif;
 }
 
-svg path {
-    stroke: hotpink;
+h2 {
+    font-size: 5rem;
+    margin: 3rem 0;
+    font-family: MuseoSansRounded900, sans-serif;
+}
+
+span {
+    display: inline-block;
+}
+
+span::first-letter {
+    color: var(--primary-fg);
+}
+
+cite {
+    font-weight: bold;
+}
+
+cite:before {
+    font-weight: normal;
+    content: "— "
+}
+
+article {
+    padding: 2rem;
+}
+
+footer {
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    max-height: 3rem;
 }
