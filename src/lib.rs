@@ -12,21 +12,21 @@ pub fn App(cx: Scope) -> Element {
 }
 
 fn Title(cx: Scope) -> Element {
-    cx.render(rsx! {
+    render! {
         header {
             id: "title",
-            img {
-                src: "rust-simply.svg"
-            }
             h1 {
                 "Rust, Simply"
             }
+            img {
+                src: "rust-simply.svg"
+            }
         }
-    })
+    }
 }
 
 fn Iriss(cx: Scope) -> Element {
-    cx.render(rsx! {
+    render! {
         article {
             id: "iriss",
             h2 {
@@ -49,13 +49,13 @@ fn Iriss(cx: Scope) -> Element {
                 }
             }
         }
-    })
+    }
 }
 
 fn Footer(cx: Scope) -> Element {
-    cx.render(rsx!(
+    render! {
         footer {
             "GitHub"
         }
-    ))
+    }
 }

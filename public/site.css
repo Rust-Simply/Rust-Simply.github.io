@@ -1,0 +1,27 @@
+html {
+    font-size: 62.5%;
+}
+
+#title {
+    position: relative;
+    background-color: #333333;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title img {
+    position: absolute;
+    left: 5rem;
+    top: 2rem;
+    transform: rotate(-20deg);
+    max-height: 50%;
+    margin: 30px;
+}
+
+#title h1 {
+    font-size: 8rem;
+    color: white;
+    font-family: "Comic Sans MS", sans-serif;
+}
