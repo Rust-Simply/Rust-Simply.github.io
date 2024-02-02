@@ -18,3 +18,4 @@ serde = "1.0.195"
 default = []
 ssr = ["tokio", "dioxus-fullstack/ssr"]
 web = ["dioxus-web"]
+csr = ["dioxus-web"]
