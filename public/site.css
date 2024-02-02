@@ -90,6 +90,11 @@ article {
     padding: 2rem;
 }
 
+.container {
+    max-width: 120rem;
+    margin: auto;
+}
+
 .fifty-fifty {
     display: flex;
     justify-content: space-around;

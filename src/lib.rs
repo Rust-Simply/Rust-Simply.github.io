@@ -26,11 +26,23 @@ fn Title(cx: Scope) -> Element {
     }
 }
 
-fn Intro(cx: Scope) -> Element {
+#[component]
+fn Article<'a>(cx: Scope<'a>, id: &'a str, children: Element<'a>) -> Element {
     render! {
         article {
-            id: "intro",
+            id: "{id}",
+            div {
+                class: "container",
+                &children
+            }
+        }
+    }
+}
 
+fn Intro(cx: Scope) -> Element {
+    render! {
+        Article {
+            id: "iriss",
             blockquote {
                 p {
                     indoc! { r#"
@@ -47,7 +59,7 @@ fn Intro(cx: Scope) -> Element {
 
 fn Iriss(cx: Scope) -> Element {
     render! {
-        article {
+        Article {
             id: "iriss",
             h2 {
                 span { "Idiomatic" }" "
