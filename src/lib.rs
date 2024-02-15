@@ -97,7 +97,7 @@ fn Iriss(cx: Scope) -> Element {
                         src: "./images/iriss-book.png"
                     }
                     figcaption {
-                        "The book"
+                        "Book"
                     }
                 }
             }
